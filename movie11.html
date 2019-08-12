@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+<title>MEGABOX</title>
+<link rel="stylesheet" href="css/swiper.css"> <!--메인 스와이프-->
+<link rel="stylesheet" href="css/flickity.css"> <!--갤러리 ㅅ와이프-->
+<link rel="stylesheet" href="css/megabox1.css">
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/swiper.js"></script><!--메인 스와이프-->
+<script type="text/javascript" src="js/flickity.pkgd.js"></script><!--갤러리 스와이프-->
+<script src="js/megabox.js"></script>
+<!-- HTML5와 미디어쿼리를 지원하지 않는 IE8 이하 버전을 위해 -->
+<!-- [if lt IE 9]>
+ <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+ <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+<![endif]-->
+</head>
+<body>
+<form>
+
+     <div id="wrap">
+          
+          <header>
+            
+             <!--로고바-->
+             <div id="logo_bar">
+                   <div class="logo">
+                        <a href="index.html"><img src="image/logo.png" width="210px" alt="megaboxlogo"></a>
+                   </div>
+                   <img src="image/menu_btn.png" width="28px"  alt="menu_btn" class="menu_btn">
+              </div>
+              
+              <!--메뉴바-->
+              <div id="nav">
+                    <img src="image/logo.png" width="150px" alt="MEGABOXLOGO">
+                        <ul class="top_nav">
+                             <li><a href="index.html"><img src="image/icons8-dog-house-100.png" width ="23px" alt="house"></a></li>
+                             <li><img src="image/icons8-settings-50.png"width ="23px"alt="setting"></li>
+                             <li class="cross"><img src="image/icons8-delete-50.png" width ="23px"alt="cross"></li>
+                        </ul>
+                        <div class="profile">
+                             <img src="image/prof.png" alt="profile">
+                             <ul class="clear">
+                                         <li class="login">로그인</li>
+                                  <li class="signup">회원가입</li>
+                             </ul>
+                        </div>
+                        <div class="main_nav">
+                             <ul>
+                                  <li><a href="movie1.html">
+                                       <img src="image/movie-tickets.png"  width="25px" alt="movie tickets">
+                                       <span class="nav_txt">영화관별 예매</span>
+                                  </a></li>
+                                  <li><a href="movie2.html">
+                                       <img src="image/movie-tickets.png"  width="25px"  alt="movie tickets">
+                                       <span class="nav_txt">영화별 예매</span>
+                                  </a></li>
+                                  <li><a href="movie1.html">
+                                       <img src="image/cinema.png"  width="25px" alt="cenema seats">
+                                       <span class="nav_txt">영화관</span>
+                                  </a></li>
+                                  <li><a href="movie4.html">
+                                       <img src="image/shopping-cart.png"  width="25px"  alt="shopping cart">
+                                       <span class="nav_txt">스토어</span>
+                                  </a></li>
+                                   <li class="my_megabox"><a href="#">
+                                       <img src="image/icons8-cinema-80.png"  width="25px"  alt="shopping cart">
+                                       <span class="nav_txt">나의 메가박스</span>
+                                  </a></li>
+                                  <li><a href="movie2.html">
+                                       <img src="image/icons8-film-reel-80.png"  width="25px"  alt="film">
+                                       <span class="nav_txt">큐레이션</span>
+                                  </a></li>
+                                  <li><a href="movie7.html">
+                                       <img src="image/icons8-clapperboard-80.png"   width="25px" alt="movie">
+                                       <span class="nav_txt">영화</span>
+                                  </a></li>
+                                  <li><a href="movie8.html">
+                                       <img src="image/icons8-gift-50.png"  width="25px"  alt="gifts">
+                                       <span class="nav_txt">이벤트</span>
+                                  </a></li>
+                                  <li><a href="movie9.html">
+                                       <img src="image/icons8-to-do-50.png"  width="25px"  alt="notice">
+                                       <span class="nav_txt">공지사항</span>
+                                  </a></li>
+                             </ul>
+                        </div>
+              </div>
+             <div class="nav_bg"></div> <!--메뉴 뒷 흰색 박스-->
+
+                                     <!--로그인창-->
+                <div class="login_bg">
+                       <img src="image/cross_white.png" width="25px" alt="cross" class="cross">
+                        <div class="login_logo">
+                              <img src="image/loginlogo.png" alt="loginlogo">
+                      </div>
+                      <div class="l_input_box">
+                            <h2>Login</h2>
+                            <div class="l_input">
+                                    <input type=text id="name" name="name" placeholder="User name">
+                                    <input type="password" id="password" name="password" placeholder="Password">
+                                  <input type="checkbox">자동로그인
+                            </div>
+                            <input type="button" value="로그인">
+                      </div>    
+                </div>
+                
+                <!--회원가입창-->
+                <div class="singup_bg">
+                       <img src="image/cross_white.png" width="25px" alt="cross" class="cross">
+                       <div class="login_logo">
+                              <img src="image/loginlogo.png" alt="loginlogo">
+                        </div>
+                      <div class="s_input_box">
+                              <h2>Sign Up</h2>
+                             <div class="s_input">
+                                  <input type=text id="name" name="name" placeholder="User name">
+                                  <input type=email id="email" name="email" placeholder="Email">
+                                  <input type="password" id="password" name="password" placeholder="Password">
+                                  <input type="checkbox">자동로그인
+                            </div>
+                            <input type="button" value="등록하기">
+                     </div>    
+                </div>
+                    
+                
+          </header>
+          
+          <section>
+             
+              <!--영화 선택-->
+               <div class="movie3 clear clear">
+                   <ul class="clear">
+                        <li><a href="index.html"> &lt; </a></li> 
+                        <li>영화상세</li> 
+                         <li><a href="movie10.html"><img src="image/tickets.png" width="20px" alt="ticket"></a>예매</li>
+                    </ul>
+                </div>
+                
+                <div class="movie11_visual">
+                      
+                      <div class="visual_box">
+                            <img src="image/about.png" alt="us">
+                            <span>예매율 30.7% <img src="image/star.png" width="10px" alt="star">평점 6.5</span>
+                      </div>
+                      
+                      <div class="visual_box2 clear">
+                            <img src="image/movie01.png" width="90px" alt="us">
+                            <div class="visual_box2_in">
+                                    <h2>US</h2><p class="age1">15</p>
+                                  <p>스릴러, 공포 (호러) / 115분</p><p>2019.03.27 개봉</p>
+                            </div>
+                      </div>
+                      
+                      <div class="movie11_about">
+                            <h2>영화정보</h2>
+                            <h3>줄거리</h3>
+                              <p>우리는 누구인가? <br>엄마, 아빠, 딸, 아들 <br>그리고 다시 <br>엄마, 아빠, 딸, 아들…</p>
+                            <h3>감독 / 출연</h3>
+                            <div class="actor">
+                                   <ul  class="main-carousel">
+                                         <li class="carousel-cell">
+                                              <img src="image/actor1.jpg" width="90px" alt="actor">
+                                              <strong>조던 필</strong><p>감독</p>
+                                         </li>
+                                         <li class="carousel-cell">
+                                              <img src="image/actor2.jpg" width="90px" alt="actor">
+                                              <strong>루피타 뇽</strong><p>윌슨/레드 역</p>
+                                         </li>
+                                         <li class="carousel-cell">
+                                              <img src="image/actor3.jpg"  width="90px" alt="actor">
+                                             <strong>윈스턴 듀크</strong><p>아브라함역</p>
+                                         </li>
+                                          <li class="carousel-cell">
+                                              <img src="image/actor4.jpg"  width="90px" alt="actor">
+                                              <strong>엘리자베스 모스</strong><p>달리아역</p>
+                                         </li>
+                                          <li class="carousel-cell">
+                                              <img src="image/actor5.jpg"  width="90px" alt="actor">
+                                             <strong>팀 헤이덱커</strong><p>텍스 역</p>
+                                         </li>
+                                          <li class="carousel-cell">
+                                              <img src="image/actor6.jpg"  width="90px" alt="actor">
+                                              <strong>야히아 압둘</strong><p>웨이랜드 역</p>
+                                         </li>
+                                          <li class="carousel-cell">
+                                              <img src="image/actor7.jpg"  width="90px" alt="actor">
+                                              <strong>애나 디옵</strong><p>레인 토마스 역</p>
+                                         </li> 
+                                         <li class="carousel-cell">
+                                              <img src="image/actor8.jpg"  width="90px" alt="actor">
+                                              <strong>에반 엘릭스</strong><p>플루토 역</p>
+                                         </li>
+                                          <li class="carousel-cell">
+                                              <img src="image/actor9.jpg"  width="90px" alt="actor">
+                                              <strong>샤하디 조셉</strong><p>조라 역</p>
+                                         </li>
+                                  </ul>
+                           </div>    
+                            <h3>스틸컷</h3>
+                            <div class="steal">
+                                  <ul  class="main-carousel">
+                                         <li class="carousel-cell">
+                                              <img src="image/st.jpg" width="200px" alt="stealcut">
+                                         </li>
+                                         <li class="carousel-cell">
+                                              <img src="image/st1.jpg" width="200px" alt="stealcut">
+                                         </li>
+                                         <li class="carousel-cell">
+                                              <img src="image/st2.jpg" width="200px" alt="stealcut">
+                                         </li>
+                                         <li class="carousel-cell">
+                                              <img src="image/st3.jpg" width="200px" alt="stealcut">
+                                         </li>
+                                         <li class="carousel-cell">
+                                              <img src="image/st4.jpg" width="200px" alt="stealcut">
+                                         </li>
+                                         <li class="carousel-cell">
+                                              <img src="image/st5.jpg" width="200px" alt="stealcut">
+                                         </li>
+                                         <li class="carousel-cell">
+                                              <img src="image/st6.jpg" width="200px" alt="stealcut">
+                                         </li>
+                                        <li class="carousel-cell">
+                                              <img src="image/st7.jpg" width="200px" alt="stealcut">
+                                         </li>
+                                  </ul>
+                           </div>  
+                            <h3>예고편</h3>
+                            <ul class="film">
+                                  <li>
+                                       <img src="image/film.png" width="270px" alt="film">
+                                        <p>메인 예고편</p>
+                                  </li>
+                                   <li>
+                                       <img src="image/film2.png" width="270px" alt="film">
+                                        <p>티저 예고편</p>
+                                  </li>
+                                   <li>
+                                       <img src="image/film3.png" width="270px" alt="film">
+                                        <p>조던 필 감독의 땡큐 코리아 영상</p>
+                                  </li>
+                                   <li>
+                                       <img src="image/film4.png" width="270px" alt="film">
+                                        <p>미친 리뷰 영상</p>
+                                  </li>
+                            </ul>
+                            
+                            
+                      </div>
+                </div>
+
+          </section>
+            
+     
+     </div>
+
+</form>
+
+<script type="text/javascript">
+$(function () {
+
+     /*메인 스와이프*/
+   var mySwiper1 = new Swiper ('.gallery1', {
+           loop: true, //순환유무	 
+           pagination: '.nav1', //네비게이션class명
+           grabCursor: true, //커서 손모양
+           autoplay: 4000, //자동진행
+           effect: ' coverflow', // 'slide' or 'fade' or 'cube' or 'coverflow' or 'flip'
+
+           //이전 다음 버튼
+      /*     nextButton: '.swiper-button-next',
+           prevButton: '.swiper-button-prev',*/
+   })
+   
+/*갤러리 스와이프*/
+   $('.main-carousel').flickity({
+  // options
+  cellAlign: 'left',
+  contain: true,
+  freeScroll: true,     
+});
+   
+      /*컨텐츠 이벤트 스와이프*/
+      var mySwiper2 = new Swiper ('.gallery2', {
+           loop: false, //순환유무	 
+           pagination: '.nav2', //네비게이션class명
+           grabCursor: true, //커서 손모양
+           //autoplay: 3000, //자동진행
+           effect: ' slide', // 'slide' or 'fade' or 'cube' or 'coverflow' or 'flip'
+
+           //이전 다음 버튼
+        /*   nextButton: '.swiper-button-next2',
+           prevButton: '.swiper-button-prev2',*/
+   })
+      
+     /*갤러리 스와이프*/
+   $('.main-carousel2').flickity({
+  // options
+  cellAlign: 'center',
+  contain: true,
+  freeScroll: true,     
+  initialIndex:1,
+ wrapAround: true
+});
+   
+   
+
+});
+</script>
+</body>
+</html>
+
