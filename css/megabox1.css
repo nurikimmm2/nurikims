@@ -1,0 +1,822 @@
+@import url(common.css);
+
+
+html{font-size:100%;}    /*16px 기본*/
+
+body{-webkit-text-size--adjust:100%;}
+/*안드로이드는 정상적으로 되는데,
+ ios에서 글자크기가 자동으로 기본크기로 변경하는 기능을 해제하기 위해 아래 소스를 사용함*/
+
+/*============================HEADER==========*/
+header{
+     width:100%;
+     position:absolute;
+     top:0;
+     left:0;
+     z-index: 9999;
+}
+
+/*메뉴바*/
+#logo_bar{
+     position:absolute;
+     top:0;
+     left:0;
+     width:inherit;
+     height:37px;
+     background:rgba(255,255,255,0.4);
+     z-index: 99;
+}
+
+#logo_bar .logo{
+     float:left;
+     margin-left:3%;
+}
+
+#logo_bar>img{
+     float:right;
+     cursor: pointer;
+     margin-right:3%;
+     margin-top:1%;
+}
+
+/*메뉴 박스*/
+#nav a{color:#000000;}
+
+.nav_bg{
+     position:fixed;
+     top:0;
+     left:0;
+     width:100%;
+     height:100%;
+     background:rgba(255, 255, 255, 0.74);
+     z-index:8997;
+     filter: blur(3px);
+     display:none;
+}
+
+#nav{  /*메뉴 바탕*/
+     position:fixed;
+     top:0;
+     right:-100%;
+     width:90%;
+     height:100%;
+     background:rgb(255, 255, 255);
+     padding:0 10%;
+     box-sizing: border-box;
+     z-index: 9999;
+     border-left:1px solid #492596;
+}
+
+
+.top_nav{
+     position:absolute;
+     top:10px;
+     right:10px;
+}
+
+.top_nav li{
+     float:left;
+     padding-left:10px;
+}
+
+#nav > img{  /*메뉴 창 로고*/
+     position:absolute;
+     top:9px;
+     left:10px;
+}
+
+.profile{margin-top:30%;}
+
+.profile ul li{
+     float:left;
+     margin:20px 0px 20px;
+     padding:0 10px;
+}
+
+.profile ul li:first-child{border-right:1px solid #000000;}
+
+.main_nav ul li{
+     height:50px;
+     line-height: 50px;
+     padding-left:10px;
+}
+
+.main_nav ul li a{font-size:15px;font-size:0.9rem;}
+
+.main_nav ul li:nth-child(1){border-top:1px solid #000000;}
+
+.main_nav ul li:nth-child(3){border-top:1px solid #000000;}
+
+.main_nav ul li:nth-child(9){
+     border-bottom:1px solid #000000;
+     border-top:1px solid #000;
+      margin-bottom:50px;
+}
+
+.main_nav ul li img{margin-top:12px;} /*메뉴 이모티콘*/
+
+.main_nav ul li .nav_txt{margin-left:28px;}
+
+
+/*로그인 회원가입창 */
+.login_bg,.singup_bg{
+      position:fixed;
+      top:0;
+      right:-100%;
+      background:url(../image/bg.png)no-repeat;
+      background-size:cover;
+      width:100%;
+      height:100%;
+      z-index: 10000;
+      color:#fff;
+}
+
+.login_bg>img,
+.singup_bg>img{
+      position:absolute;
+      top:10px;
+      right:10px;
+}
+
+.login_bg .login_logo,
+.singup_bg .login_logo{
+      text-align: center;
+      margin-top:20%;
+      margin-bottom:20%;
+}
+
+.login_bg h2 ,.singup_bg h2{
+      font-size:20px;
+      font-size:1.250rem;
+      margin-bottom:10%;
+}
+
+.login_bg .l_input_box,
+.singup_bg .s_input_box{
+      padding:0 30px;
+}
+
+.login_bg input,
+.singup_bg input{
+      display:block;
+      height:35px;
+      width:100%;
+      border:0;
+      border-bottom:1px solid #fff;
+      background: none;
+      margin-top:7%;
+      margin-bottom:1%;
+}
+
+.login_bg input::placeholder,
+.singup_bg input::placeholder{ color:#fff;}
+
+.login_bg input[type=button],
+.singup_bg input[type=button]{
+      color:#fff;
+      border:1px solid #fff;
+      padding:6% 0;
+      line-height:6%;
+      margin-top:33%;
+}
+
+.login_bg input[type=checkbox],
+.singup_bg input[type=checkbox]{
+      display:inline;
+      width:15px;
+      height:15px;
+      border:1px solid #fff;
+      margin-top:7px;
+      margin-right:10px;
+}
+
+
+
+/*///////////////////////내용//////////////////*/
+
+section{
+     margin-top:40px;
+}
+
+.movie1 ul li{
+     width:10%;
+     float:left;
+     height:40px;
+     line-height: 40px;
+     border-top:1px solid #e8e8e8;
+}
+
+.movie1 li:nth-child(2){width:80%;text-align: center;}
+
+.movie1 li:last-child{float:right;}
+.movie1 li:last-child img,
+.movie1 ul li:first-child img{margin-top:10px;margin-left:5px;}
+
+.movie1 h2{
+     font-size:15px;
+     font-size:0.938rem;
+}
+
+.movie1_want{
+     width:100%;
+     height:30px;
+     background:#361f66;
+     color:#fff;
+     line-height: 30px;
+     text-align: center;
+     font-size:11px;
+     font-size:0.688rem;
+}
+
+.search_input{
+      position:absolute;
+      width:100%;
+      height:40px;
+      background:#f7f7f7;
+      top:81px;
+      right:0%;
+      text-align: center;
+      display:none;
+}
+
+.search_input input{
+      margin: 0 auto;
+      width:50%;
+      height:34px;
+      border:none;
+      border-bottom:2px solid #361f66;
+      background: #f7f7f7;
+}
+
+.search_input ::placeholder {text-align: center;}
+
+/*지역 탭메뉴*/
+.movie1_tabs,
+.movie4_tabs{
+      position:relative;
+}
+
+.movie1_tab,
+.movie4_tab{
+      width:32%;
+      float:left;
+}
+
+.movie1_tab li,
+.movie4_tab li{
+      height:40px;
+      line-height: 40px;
+      background:#f8f8f8;
+      text-indent: 20px;
+}
+
+.movie1_tab> li> a,
+.movie4_tab> li >a{
+      position:relative;
+      z-index: 10;
+      color:#333;
+}
+
+.movie1_tab> li:first-child >a,
+.movie4_tab >li:first-child >a{
+      color:#361f66;
+      font-weight: bold;
+}
+
+.tab_highlight,
+.tab4_highlight{
+      position:absolute;
+      top:0;
+      left:0;
+      width:32%;
+      height:40px;
+      background:#fff;
+      border-left:3px solid #361f66;
+}
+
+.movie1_panel{
+      width:58%;
+      float:right;
+}
+
+.movie1_panel> li{
+      height:40px;
+      line-height: 40px;
+      display: none;
+}
+
+.movie1_panel> li a{color:#333;}
+
+.movie1_panel> li:first-child{display:block;}
+
+/*영화선택*/
+.movie2{position:relative;}
+
+.movie2 ul li:first-child{
+      position:absolute;
+      top:0;left:5px;
+}
+.movie2 ul h2{
+      width:100%;
+      text-align: center;
+      font-size:16px;
+      font-size:1rem;
+}
+
+.movie2 span{
+      display:inline-block;
+      width:100%;
+      text-align: center;
+      padding:5px 0; 
+}
+
+/*탭메뉴*/
+.movie2_tab{
+      width:178px;
+      margin:15px auto 20px;;
+}
+
+.movie2_tab li a{
+      float:left;
+      padding:5px 20px;
+      background:#ededed;
+      font-size:11px;
+       font-size:0.688rem;
+}
+.movie2_tab li:first-child a{border-radius: 10px 0 0 10px; }
+.movie2_tab li:last-child a{border-radius: 0 10px 10px 0; }
+
+.movie2_tab li a.on{background:#361f66;color:#fff;}
+.movie2_tab li a{color:#333;}
+
+/*탭메뉴 내용*/
+.movie2_panel{width:100%;}
+
+.movie2_panel >li ul li{
+      position:relative;
+      width:43%;
+      float:left;
+      margin:0 3.5% 20px;
+}
+
+.movie2_panel> li img{width:100%;}
+
+.movie2_panel li ul li p{
+      position:absolute;
+      bottom:0;
+      left:0;
+      width:100%;
+      padding:10px 5px;
+      background:rgba(0,0,0,0.6);
+      color:#fff;
+      box-sizing: border-box;
+}
+
+.movie2_panel>li:last-child{display:none;}
+
+/*영화 */
+.movie3{position:relative;}
+
+.movie3 ul{border-bottom:1px solid #e8e8e8;}
+
+.movie3 ul li{
+      height:35px;
+      line-height: 35px
+}
+
+.movie3 ul li:nth-child(2){
+      width:100%;
+      text-align: center;
+      font-size:16px;
+      font-size:1rem;
+      font-weight: bold;
+}
+
+.movie3 ul li:first-child{
+      position:absolute;
+      left:5px; 
+      top:0;
+}
+
+.movie3 ul li:last-child{
+      position:absolute;
+      right:5px;
+      top:7px; 
+      line-height:26px;
+      color:#361f66
+}
+.movie3 ul li:last-child img{margin-right:3px;}
+
+/*영화 탭 메뉴*/
+.movie3_tabs,
+.movie8_tabs{border-bottom:1px solid #e8e8e8;}
+
+.movie3_tab{
+      width:280px;
+      margin:0 auto;
+      position:relative;
+}
+
+.movie8_tab{
+      width:250px;
+      margin:0 auto;
+}
+
+.movie3_tab li a{
+      display:inline-block;
+      float: left;
+      margin:0 18px;
+      height:40px;
+      line-height: 40px;
+}
+
+.movie8_tab li a{
+      display:inline-block;
+      float: left;
+      margin:0 10px;
+      height:40px;
+      line-height: 40px;
+}
+
+.movie3_tab li a,.movie8_tab li a{color:#333;}
+
+.movie3_tab li a.on1,
+.movie8_tab li a.on3{
+      border-bottom: 3px solid #361f66;
+      color:#361f66;
+      font-weight: bold;
+}
+
+/*영화 탭내용*/
+.movie3_panel{
+      margin-top:20px;
+      width:100%;
+}
+
+.movie3_panel > li{
+      width:70%;
+      padding:0 20px;
+      margin:0 auto;
+      display:none;
+}
+
+.movie3_panel>li:first-child{display:block;}
+
+.movie3_panel > li>ul>li{
+      margin-bottom:30px;
+      border-bottom:1px solid #cccccc;
+}
+
+.movie3_panel>li>ul>li >a>img{
+      width:100%;
+      box-shadow: 3px 3px 6px #afafaf;
+      margin-bottom:15px;
+}
+
+.movie3_panel>li>ul>li .movie3_txt{text-align: left;}
+
+.movie3_panel>li>ul>li .movie3_txt h3{
+      float:left;
+}
+
+.movie3_panel>li>ul>li .movie3_txt h3 span{
+      font-size:11px;
+      padding-left:10px;
+}
+
+.movie3_panel .movie3_txt p{
+      float:right;
+      color:#4b2f86;
+      font-weight: bold;
+}
+
+.movie3_panel  .movie3_txt > div{
+      clear:both;
+      padding:15px 0 10px;
+      line-height: 17px;
+}
+
+/*스토어*/
+
+.movie4_panel{
+      width:68%;
+      float:right;
+}
+
+.movie4_panel>  li{
+      padding:10px 35px;
+      display:none;
+}
+
+.movie4_panel>li:first-child{display: block;}
+
+.movie4_panel> li img{
+      width:100%;
+      box-shadow: 2px 2px 5px #c9c9c9;
+}
+
+.movie4_panel li h4{ margin:10px 0 5px;}
+
+.movie4_panel li p{
+      float:left;
+      height:40px;
+}
+
+.movie4_panel li span{
+      float:right;
+      color:#4cbeb8;
+      font-weight:bold;
+}
+
+
+/*공지사항*/
+
+.movie9{border-bottom:1px solid #e8e8e8;}
+
+.movie9_notice{width:100%;}
+
+.moive9_notice dl dt{ /*탭제목*/
+      height:40px;
+      padding:8px 10px;
+      border-bottom:1px solid #e8e8e8;
+}
+
+.moive9_notice  .top{width:100%;}  
+
+.moive9_notice dl dt h4{
+      display:inline-block
+      ;float:left;
+      color:#330690;
+}
+
+.moive9_notice dl dt h5{
+      margin-left:10px;
+      font-size:12px;
+      font-size:0.7rem;
+      font-weight: 100;
+      display:inline-block;
+}
+
+.new{
+      background:#5e3ba7;
+      color:#fff;
+      padding:1px 3px;
+      border-radius: 20px;
+}
+
+.moive9_notice dl dt .plus{
+      float:right;
+      font-size:14px;
+       font-size:0.875rem;
+}
+
+.moive9_notice dl dt p{margin-top:7px;color:#888888;}
+
+.moive9_notice dd{
+      padding:20px 10px;
+      background:#f5f5f5;
+      line-height: 20px;
+      font-size:11px;
+      display:none;
+}
+
+.moive9_notice span.pluss{transform:rotate(45deg);}
+
+/*이벤트 창*/
+
+.movie8_panel{
+      margin-top:20px;
+      width:100%;
+}
+
+.movie8_panel >li{
+      width:75%;
+      margin:0 auto;
+      display:none;
+}
+
+.movie8_panel>li:first-child{display: block;}
+
+.movie8_panel>li>ul>li {margin-bottom:25px;}
+
+.movie8_panel>li>ul>li img{width:100%;}
+
+.movie8_panel >li> ul li> .a4_txt{
+      width:100%;
+      padding:5px 15px 0 15px;
+      border:1px solid #e8e8e8;
+      box-sizing: border-box;
+      line-height: 20px;
+      color:gray;
+}
+
+.movie8_panel >li>ul li>.a4_txt p{
+       font-size:0.813rem;
+      font-size:11px;
+      color:#363636;
+      font-weight: bold;
+}
+
+.movie8_panel >li>ul>li .a4_txt div{
+      text-align: center;
+      border-top:1px solid #e8e8e8;
+      margin-top:6px;
+      padding:3px 0;
+      font-weight: bold;
+}
+
+/*영화 예매 */
+.movie10{width:100%;}
+
+.movie10 > img{width:100%;}
+
+.movie10_t{
+      padding:10px;
+      border-bottom:1px solid #e8e8e8;
+}
+
+.movie10_txt{float:left;}
+
+.movie10_txt h2{
+      font-size:16px;
+      font-size:1rem;
+      color:#523391;
+}
+
+.movie10_txt p{ margin-top:3px;}
+
+.movie10_txt1{
+      float:right;
+      width:26%;
+      text-align: right;
+      line-height: 19px;
+}
+
+/*날짜*/
+.movie10_date ul li{
+      float:left;
+      width:32px;
+      height:40px;
+      margin:10px 2.1%;
+      text-align: center;
+      border-radius: 20px;
+      padding-top:9px;
+      line-height: 17px;
+}
+
+.movie10_date ul li.active{
+      background:#361f66;
+      color:#fff;
+}
+
+.movie10_date1{
+      font-size:14px;
+     font-size:0.938rem;
+      margin-left:10px;
+      padding-bottom:15px;
+}
+
+/*영화 예매 영화관 아코디언*/
+.movie10_theater dl dt{
+      font-size:16px;
+      height:40px;
+      line-height: 40px;
+      border-top:1px solid #e8e8e8;
+      padding:0 15px;
+}
+.movie10_theater dl dt strong{color:#3f2080;}
+
+.movie10_theater .plus{float:right;}
+
+.movie10_theater dl dd{padding:15px;}
+
+.movie10_theater dl dd> ul{
+      overflow: hidden;
+      padding: 10px 10px 0px;
+}
+
+.movie10_theater dl dd> ul> li{
+      position:relative;
+      float:left;
+      height:60px;
+      line-height: 22px;
+      font-size:10px;
+      margin:0 9px;
+}
+
+.movie10_theater dl dd ul li .movie10_bg{
+      position:absolute;
+      top:0;
+      left:-7px;
+      width:70px;
+      height:45px;
+      background:#f0f0f0;
+      box-shadow: 2px 2px 3px #bcbcbc;
+      transform:skew(-25deg,0deg);
+      z-index: -1;
+}
+
+.movie10_theater dl dd ul li .color{
+      color:#46248e;
+      font-weight: bold;
+}
+
+.movie10_theater span.plusss{transform:rotate(45deg);}
+
+/*영화상세*/
+.movie11_visual{width:100%;}
+
+.visual_box{position:relative}
+
+.visual_box> img{width:100%;}
+
+.visual_box span{
+      position:absolute;
+      bottom:10px;
+      right:10px;
+      color:#fff;
+}
+
+.visual_box2{
+      width:80%;
+      position:relative;
+      top:-40px;
+      left:10%;
+}
+
+.visual_box2 img{
+      float:left;
+      box-shadow: 1px 1px 4px black;
+}
+
+.visual_box2_in{
+      padding-top:60px;
+      line-height:21px;
+      margin-left:110px;
+}
+
+.visual_box2_in .age1{
+      background:#c1c151;
+      padding:0 2px;
+      display:inline-block;
+      font-size:10px;
+      border-radius: 20px;
+      color:#fff;
+      margin-left:5px;
+      line-height: 17px;;
+      margin-bottom:10px;
+}
+
+.visual_box2_in h2{float:left;}
+
+.movie11_about{
+      padding-left:15px;
+      padding-right:15px;
+}
+
+.movie11_about h2{
+      font-size:16px;
+      font-size:1rem;
+      color:#4b4b4b;
+      padding-bottom:7px;
+      border-bottom:1px solid #464646;
+}
+
+.movie11_about h3{padding:35px 0 20px;}
+
+.actor ul  .carousel-cell{
+      width:90px;
+     height:150px;
+      margin-right:15px;
+}
+
+.steal ul .carousel-cell{
+      width:200px;
+      height:140px;
+      margin-right:10px;
+}
+
+.film li {
+      width:45%;
+      margin-right:2.5%;
+      float:left;
+}
+.film li  img{width:100%;}
+
+.film li p{
+      padding:10px 0;
+      font-weight:bold;
+}
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
